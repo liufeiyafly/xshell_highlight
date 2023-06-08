@@ -1,2 +1,2 @@
-# xshell_highlight
-Highlight xshell words
+# Xshell Highlight Sets
+Highlight Xshell words
