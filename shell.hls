@@ -1,0 +1,174 @@
+[Keyword_0]
+TermBackColor=1
+Underline=0
+Bold=0
+Strikeout=0
+Keyword=成功|正确|\b=?(true|yes|ok)\b|\b(accepted|allowed|enabled|connected|erfolgreich|exitoso|successo|sucedido|framgångsrik|successfully|successful|succeeded|success)\b|[\[=<"':.,;\(\{] *(true|yes|ok) *[\]=>"':.,;\)}]
+Description=正确规则，绿|Successful things.
+BackColorIndex=292
+UseRegex=1
+Italic=0
+Enable=1
+TextColorIndex=291
+CaseSens=0
+[Keyword_1]
+TermBackColor=1
+Underline=0
+Bold=0
+Strikeout=0
+Keyword=\[\-w[A-Za-z-]+\]|caught signal [0-9]+|cannot|(connection (to (remote host|[a-z0-9.]+) )?)?(closed|terminated|stopped|停止|关闭|未响应|not responding)|未找到命令|未知的|不能|警告|\b(no more [A-Za-z] available|(command |binary |file )?not found|out of (space|memory)|low (memory|disk)|(o)+ps|exited|unexpected|unknown|disabled|disconnected|deprecated|refused|disconnect(ion)?|advertencia|avvertimento|attention|warnings?|achtung|exclamation|alerts?|warnungs?|advarsel|pedwarn|aviso|varoitus|upozorenje|peringatan|uyari|varning|avertissement|\(ww\)|\(\?\?\)|could not|unable to)\b
+Description=警告规则，黄|Warning things.
+BackColorIndex=292
+UseRegex=1
+Italic=0
+Enable=1
+TextColorIndex=292
+CaseSens=0
+[Keyword_2]
+TermBackColor=1
+Underline=0
+Bold=0
+Strikeout=0
+Keyword=[=>"':.,;({\[] *(false|no|ko) *[\]=\>"':.,;\)}]|错误|失败|拒绝|崩溃|中断|(bad|wrong|incorrect|improper|invalid|unsupported|bad)( file| memory)? (descriptor|alloc(ation)?|addr(ess)?|owner(ship)?|arg(ument)?|param(eter)?|setting|length|filename)|(operation |connection |authentication |access |permission )?(denied|disallowed|not allowed|refused|problem|failed|failure|not permitted)|no [A-Za-z]+( [A-Za-z]+)? found|seg(mentation )?fault|\b(not properly|improperly|invalid|unsupported|not supported|corruption|corrupted|corrupt|overflow|underrun|not ok|not?|unimplemented|unsuccessfull|not implemented|permerrors?|fehlers?|errore|errors?|erreurs?|fejl|virhe|greška|erro|exceptions?)\b
+Description=错误规则，红|Wrong things.
+BackColorIndex=292
+UseRegex=1
+Italic=0
+Enable=1
+TextColorIndex=290
+CaseSens=0
+[Keyword_3]
+TermBackColor=1
+Underline=0
+Bold=0
+Strikeout=0
+Keyword=(localhost|(?:(?:1[0-9][0-9]\.)|(?:2[0-4][0-9]\.)|(?:25[0-5]\.)|(?:[1-9][0-9]\.)|(?:[0-9]\.)){3}(?:(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5])|(?:[1-9][0-9])|(?:[0-9]))|null|none)
+Description=主机规则，洋红|All IPV4 Address and localhost, null, none
+BackColorIndex=292
+UseRegex=1
+Italic=0
+Enable=1
+TextColorIndex=294
+CaseSens=0
+[Keyword_4]
+TermBackColor=1
+Underline=0
+Bold=0
+Strikeout=0
+Keyword=信息|加载|last (failed )?login:|\b(launching|checking|loading|creating|building|important|booting|starting|notice|informational|informationen|informazioni|informação|oplysninger|informations?|info|información|informasi|note|\(ii\)|\(\!\!\))\b
+Description=信息规则，青|informative things.
+BackColorIndex=292
+UseRegex=1
+Italic=0
+Enable=1
+TextColorIndex=295
+CaseSens=0
+[Keyword_5]
+TermBackColor=1
+Underline=1
+Bold=0
+Strikeout=0
+Keyword=\b(http(s)?://[A-Za-z0-9_.&?=%~#\{\}\(\)@+-]+:?[A-Za-z0-9_./&?=%~#{}()@+-]+)\b
+Description=链接地址|The URL.
+BackColorIndex=292
+UseRegex=1
+Italic=0
+Enable=1
+TextColorIndex=289
+CaseSens=0
+[Keyword_6]
+TermBackColor=1
+Underline=0
+Bold=0
+Strikeout=0
+Keyword=(?<=[^\\])(\$\([^\(\)]+\))|`[^`][^`]+`|(?<=[^\\])\$\(\(.*\)\)
+Description=sh-命令表达式|Shell command expression.
+BackColorIndex=292
+UseRegex=1
+Italic=0
+Enable=1
+TextColorIndex=293
+CaseSens=0
+[Keyword_7]
+TermBackColor=1
+Underline=0
+Bold=0
+Strikeout=0
+Keyword=^#.*$|(?<=\s+[^\]{\$])#.*[^'"]$
+Description=sh-注释|The comments.
+BackColorIndex=292
+UseRegex=1
+Italic=0
+Enable=1
+TextColorIndex=288
+CaseSens=0
+[Colors]
+Colors=FF0080,0000C0,00C000,00C0C0,C00000,C000C0,C0C000,59876A,555555,5555FF,55FF55,55FFFF,FF5555,FF55FF,FFFF55,FFFFFF
+[Keyword_8]
+TermBackColor=1
+Underline=0
+Bold=0
+Strikeout=0
+Keyword=(?<=[^\\])(\\(033|e|E)\[(1;)?(0|30|31|32|33|34|35|36)m|/dev/null|\|\||\&\&)
+Description=sh-转义、且或|Shell escape characters, AND(&&), OR(||)
+BackColorIndex=292
+UseRegex=1
+Italic=0
+Enable=1
+TextColorIndex=295
+CaseSens=0
+[Keyword_9]
+TermBackColor=1
+Underline=0
+Bold=0
+Strikeout=0
+Keyword=\bfor\b(each)?|\b(do|done|if|fi|while|in|until|then|break|elif|else|endif|case|esac)\b
+Description=sh-循环判断关键字|while if loop key words in bash.
+BackColorIndex=292
+UseRegex=1
+Italic=0
+Enable=1
+TextColorIndex=284
+CaseSens=1
+[info]
+Version=1.1
+Count=13
+[Keyword_10]
+TermBackColor=1
+Underline=0
+Bold=0
+Strikeout=0
+Keyword=(?<=^| |;)(alias|bg|bind|break|builtin|caller|case|cd|command|compgen|complete|compopt|continue|coproc|declare|dirs|echo|disown|enable|eval|exec|exit|export|false|fc|fg|for|for|function|getopts|hash|help|history|jobs|kill|let|local|logout|mapfile|popd|printf|pushd|pwd|read|readarray|readonly|return|select|set|shift|shopt|source|suspend|test|times?|trap|true|type|typeset|ulimit|umask|unalias|unset|until|variables|wait)(?=$| |;)
+Description=sh-内建命令|Linux Built-in commands.
+BackColorIndex=292
+UseRegex=1
+Italic=0
+Enable=1
+TextColorIndex=284
+CaseSens=1
+[Keyword_11]
+TermBackColor=1
+Underline=0
+Bold=0
+Strikeout=0
+Keyword=(?<=(^| |;|\|))(awk|base64|basename|bash|cat|chgrp|chmod|chown|clear|cp|curl|cut|date|dd|df|du|e?grep|env|file|find|firewall-cmd|free|head|hostname|hostnamectl|id|init|last|ld|less|ln|ls|lsattr|lsblk|lscpu|man|mkdir|more|mount|mv|nice|nohup|nproc|passwd|ps|pwdx|rm|rmdir|rpm|scp|sed|setenforce|sh|sleep|sort|ss|ssh|su|sudo|sysctl|systemctl|tac|tailf?|tar|tee|top|touch|umount|uname|uniq|unzip|uptime|useradd|vi|w|watch|wc|whereis|which|who|whoami|xargs|yum)(?=($| |;))
+Description=sh-常用命令|Frequently-used shell commands.
+BackColorIndex=292
+UseRegex=1
+Italic=0
+Enable=1
+TextColorIndex=284
+CaseSens=1
+[Keyword_12]
+TermBackColor=1
+Underline=0
+Bold=0
+Strikeout=0
+Keyword=(?<=[^\\]|=)(\$[\?@\$]|\$\(\([^(\)]+\)\)|\$\{[^\}]+\}|\$\[[^\]]+\]|\$[A-Za-z_0-9]+)
+Description=sh-变量|Shell vars.
+BackColorIndex=292
+UseRegex=1
+Italic=0
+Enable=1
+TextColorIndex=284
+CaseSens=0
